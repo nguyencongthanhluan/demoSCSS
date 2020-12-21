@@ -1,0 +1,98 @@
+@import "./variable";
+
+$bg: yellow;
+
+h1 {
+  background-color: $bg;
+  color: $color;
+  font-size: 60px;
+}
+
+.title {
+  background-color: $bg;
+}
+
+.content {
+  background-color: $bg;
+  h1 {
+    font-size: 60px;
+  }
+  p {
+    font: {
+      family: Arial;
+      size: 40px;
+    }
+    color: red;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+@mixin section($bgr, $font) {
+  background-color: $bgr;
+  font-size: $font;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.section_2 {
+  @include section(aqua, 30px);
+}
+
+.section_3 {
+  @include section(red, 50px);
+}
+
+.btn_1 {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.btn_2 {
+  @extend .btn_1;
+  font-size: 20px;
+}
+
+$blockColor: white;
+
+.container {
+  @if $blockColor == red {
+    background-color: red;
+  } @else if $blockColor == green {
+    background-color: green;
+  } @else {
+    background-color: blue;
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: 15px;
+  }
+}
+
+@for $size from 1 through 3 {
+  .header-#{$size} {
+    font-size: 2rem * $size;
+  }
+}
+
+$socials: twitter linkedin pinterest facebook;
+@each $social in $socials {
+  .#{$social} {
+    background-image: url("./img/icon/#{$social}.png");
+    width: 16px;
+    height: 16px;
+  }
+}
+
+$col: 4;
+
+@while $col > 0 {
+  .cols-#{$col} {
+    width: 100% / $col;
+  }
+  $col: $col - 1;
+}

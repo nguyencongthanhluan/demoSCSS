@@ -1,0 +1,89 @@
+h1 {
+  background-color: yellow;
+  color: red;
+  font-size: 60px; }
+
+.title {
+  background-color: yellow; }
+
+.content {
+  background-color: yellow; }
+  .content h1 {
+    font-size: 60px; }
+  .content p {
+    font-family: Arial;
+    font-size: 40px;
+    color: red; }
+    .content p:hover {
+      color: blue; }
+
+.section_2 {
+  background-color: aqua;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 0; }
+
+.section_3 {
+  background-color: red;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px 0; }
+
+.btn_1, .btn_2 {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 20px;
+  border-radius: 5px; }
+
+.btn_2 {
+  font-size: 20px; }
+
+.container {
+  background-color: blue; }
+  @media screen and (min-width: 500px) {
+    .container {
+      font-size: 15px; } }
+
+.header-1 {
+  font-size: 2rem; }
+
+.header-2 {
+  font-size: 4rem; }
+
+.header-3 {
+  font-size: 6rem; }
+
+.twitter {
+  background-image: url("./img/icon/twitter.png");
+  width: 16px;
+  height: 16px; }
+
+.linkedin {
+  background-image: url("./img/icon/linkedin.png");
+  width: 16px;
+  height: 16px; }
+
+.pinterest {
+  background-image: url("./img/icon/pinterest.png");
+  width: 16px;
+  height: 16px; }
+
+.facebook {
+  background-image: url("./img/icon/facebook.png");
+  width: 16px;
+  height: 16px; }
+
+.cols-4 {
+  width: 25%; }
+
+.cols-3 {
+  width: 33.3333333333%; }
+
+.cols-2 {
+  width: 50%; }
+
+.cols-1 {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
